@@ -11,43 +11,151 @@ body{
     scroll-behavior: smooth !important;
 }
 
-#main-content{
-    background-color: #333 !important;
-    overflow-x: hidden;
-    font-family: Montserrat;
-    border-radius: 16px;
-}
-
-.page-header {
+#gcb-hero {
+    position: relative;
     width: 100%;
-    height: 600px;
-    background-image: url(https://iili.io/50YNEv.png);
-    background-size: 120%;
+    height: 450px;
+    background-image: url(http://confluence.viavarejo.com.br/download/attachments/60947505/gcb-hero-bg.png);
+    background-size: 128%;
     background-repeat: repeat-y;
-    animation: BackgroundMoveHero 30.0s ease-in-out infinite !important;
-    text-align: center;
-    margin: 0 0 20px 0;
+    animation: hero 30.0s ease-in-out infinite !important;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+flex-direction: column;
+	overflow: hidden;
 }
 
-@keyframes BackgroundMoveHero{
+#gcb-hero .gcb-hero-bottom { position: absolute; background-image: url(http://confluence.viavarejo.com.br/download/attachments/60947505/gcb-hero-bottom.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+	top:130px;
+	width: 100%;
+    height: 100%;
+	width: 100%;
+    height: 100%;
+}
+
+#gcb-hero .gcb-hero-content {
+position: absolute;
+    padding: 32px;
+    margin-top: -150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gcb-hero .gcb-hero-header {
+    width: 100%;
+    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#gcb-hero h1 {
+    font-family: Montserrat;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+#gcb-hero .gcb-hero-content img {
+    width: 210px;
+    margin-bottom: 80px;
+}
+
+#gcb-hero h2 {
+        font-family: Montserrat;
+        color: white;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 36px;
+        text-align: left;
+        margin: 0;
+    }
+
+#gcb-hero h5 {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    margin: 15px 0 6px 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 32px;
+    padding: 2px 20px;
+    display: inline;
+}
+
+@keyframes hero{
    0%{background-position: 0% 0%;}
    50%{background-position: 100% 0%;}
    100%{background-position: 0% 0%;}
+}
 
+.expand-container {
+    background: white;
+    padding: 16px 28px 10px 16px;
+    border-radius: 6px;
+    margin: 2px 2px 12px 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
 
+.expand-container .expand-icon {
+    color: #E71A3B;
+    margin-right: 8px;
+    margin-top: 1px;
+}
 
-article {background: #333; color: white; padding: 32px; display: flex; flex-direction: column; align-items: center; padding-bottom: 64px;}
-    
-	img { width:100% }
-    
-	header, section { max-width: 2000px; }
+.aui-icon-small {
+    --aui-icon-size: 24px !important;
+}
 
-    section h3.titulo { color: white; text-transform: uppercase; text-align: center; margin: 12px 0 32px 0; font-size: 18px; }
-    section { display: flex; flex-direction: column; align-items: center; }
-    .members { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; }
-    .members .box { margin: 8px; display: flex; flex-direction: row; align-items: center; width: 385px; background: #242424; border-radius: 16px; box-shadow: 1px 3px 5px 0px #222; }
-    .members .box .avatar { border-radius: 100%; width: 100px; padding: 20px 16px 20px 20px;  }
-    .members .box .member { padding-right: 20px; }
-    .members .box .member h5 { font-size: 14px; color: white; text-transform: uppercase; margin: 0;  }
-    .members .box .member h6 { font-size: 12px; font-weight: 700; text-transform: uppercase; color: #00D5C3; margin: 0;  }
-    .members .box .member strong { font-size: 12px; line-height: 20px; color: #6658F6; }
+.expand-container .expand-control-text {
+    color: #24284D;
+    font-weight: 700;
+    font-family: Montserrat;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.expand-container .expand-content p{
+    font-size: 16px;
+    color: #24284D;
+}
+
+.wiki-content { background-color: #F4F7FA; max-width: 1440px; overflow-x: hidden; border-radius: 16px; border: 3px solid #EDF2F7; }
+.wiki-content h2 { font-family: Montserrat; color: #0033C6; font-size: 24px; margin-bottom: 12px; }
+.wiki-content p, .wiki-content ul li { font-family: Montserrat; color: #24284D; line-height: 24px; }
+.wiki-content hr { border-color: #E71A3B; border-width: 2px; padding-top: 10px; margin-bottom: 30px; }
+.wiki-content h4 a, .wiki-content h4 a:visited {color:#24284D }
+
+.wiki-content table.tablesorter { width: 100%; }
+
+.wiki-content table.tablesorter>thead>tr>th {
+    background: #00d3c3 center right no-repeat;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.wiki-content .tablesorter-header-inner, .wiki-content table.tablesorter>tbody>tr>td.confluenceTd {
+    color: #24284D;
+}
+
+.wiki-content .columnLayout .cell.sidebars {
+    width: 5% !important;
+}
+
+table.aui:not(.aui-table-list)>tbody>tr>td, table.aui:not(.aui-table-list)>tbody>tr>td a, table.aui:not(.aui-table-list)>tbody>tr>th, table.aui:not(.aui-table-list)>tfoot>tr>td, table.aui:not(.aui-table-list)>tfoot>tr>th {
+    color: #24284D;
+}
+
+.btn { background: #E71A3B; color: white !important; font-weight: 500; padding: 8px 32px; border-radius: 6px; height: 20px; margin-left:12px }
+.btn.new { background: #0033C6; color: #222 !important; }
